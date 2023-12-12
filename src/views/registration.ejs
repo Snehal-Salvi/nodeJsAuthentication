@@ -1,0 +1,43 @@
+<!-- Registration Page  -->
+<form action="/register" method="post">
+      
+    <div class="login-container">
+
+      <% if(errorMessage) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= errorMessage %>
+        </div>
+    <% } %>
+
+
+        <h2 class="fw-bold mb-2 text-uppercase">Register</h2> 
+
+        <div class="input-group margin">
+            <span class="input-group-text ">Name</span>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+          <div class="input-group margin">
+            <span class="input-group-text ">Email</span>
+            <input required="" name="email" type="email" aria-label="email" class="form-control" placeholder="enter your email">
+          </div>
+        
+        <div class="mb-3">
+          <div class="input-group ">
+            <span class="input-group-text">Password</span>
+            <input required="" name="password" type="password" aria-label="password" class="form-control" placeholder="enter your password">
+          </div>
+        </div>
+    
+        <button type="submit" class="btn btn-md mt-2 lbtn login-button">Register</button>
+
+        <p>Already have an account? <a href="/login" class="link-info">Login here</a></p>
+        <a href="/" class="link-info">Back to Home Page </a>
+
+        <div class="d-flex justify-content-center text-center mt-4 pt-1">
+            <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+            <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+          </div>
+    </div>
+</form>
